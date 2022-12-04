@@ -2,16 +2,18 @@
 // com.nxp.nfc - library
 //#######################################
 prebuilt_etc {
-    name: "com.nxp.nfc.xml",
+    name: "com.nxp.nfc.nq.xml",
+    system_ext_specific: true,
     sub_dir: "permissions",
-    src: "com.nxp.nfc.xml",
+    src: "com.nxp.nfc.nq.xml",
 }
 
 java_library {
 
-    name: "com.nxp.nfc",
+    name: "com.nxp.nfc.nq",
     installable: true,
-    required: ["com.nxp.nfc.xml"],
+    required: ["com.nxp.nfc.nq.xml"],
+    system_ext_specific: true,
 
     srcs: [
         "com/**/I*.aidl",
